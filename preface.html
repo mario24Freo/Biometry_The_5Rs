@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -214,16 +215,16 @@ window.Quarto = {
 </header>
 
 
-<p>This book is about the use of modern statistical methods in the agricultural sciences. <span class="citation" data-cites="Fisher1948">Fisher (<a href="references.html#ref-Fisher1948" role="doc-biblioref">1948</a>)</span> defined biometry as the “active pursuit of biological knowledge by quantitative methods”. He was the first President of the International Biometric Society (1947). In my undergraduate days, I bought the five volumes of the collected papers of RA Fisher (<span class="citation" data-cites="Bennett1974">H.Bennett (<a href="references.html#ref-Bennett1974" role="doc-biblioref">1974</a>)</span>).</p>
-<p>So this book is about my adventures as a working biometrician on the western frontier of the Australasian Region of the International Biometric Society, working for the Department of Agriculture, Western Australia (1977-2019).</p>
+<p>This book is about the use of modern statistical methods in the agricultural sciences. <span class="citation" data-cites="Fisher1948">Fisher (<a href="references.html#ref-Fisher1948" role="doc-biblioref">1948</a>)</span> defined biometry as the “active pursuit of biological knowledge by quantitative methods”. He was the first President of the International Biometric Society (1947). In my undergraduate days, I bought the five volumes of the collected papers of Fisher (<span class="citation" data-cites="Bennett1974">H.Bennett (<a href="references.html#ref-Bennett1974" role="doc-biblioref">1974</a>)</span>).</p>
+<p>So this book is about my adventures as a working biometrician on the western frontier of the Australasian Region of the International Biometric Society, working for the Department of Agriculture, Western Australia (1977-2019), today known as DPIRD.</p>
 <p>The design of an experiment in the agricultural sciences is the most important step for an agricultural scientist and a biometrician. Fisher gave us the <span class="math inline">\(3\mathcal{R}s\)</span> of design:</p>
 <p>Randomization, replication, and blocking or local control.</p>
 <p>I have added another <span class="math inline">\(2\mathcal{R}s\)</span> for a biometrician to consider</p>
 <ul>
 <li><p><span class="math inline">\(\mathcal{R4}\)</span>: The work (publications/statistical software) of the statistical scientists from the school of Rothamsted in England, and collaborators in Australia, and New Zealand.</p></li>
-<li><p><span class="math inline">\(\mathcal{R5}\)</span>: The <span class="math inline">\(\textsf{R}\)</span> statistical system <span class="citation" data-cites="R2026">R Core Team (<a href="references.html#ref-R2026" role="doc-biblioref">2026</a>)</span> and the Rstudio environment <span class="citation" data-cites="RStudio">Posit team (<a href="references.html#ref-RStudio" role="doc-biblioref">2026</a>)</span> and the community of statistical scientists. As <span class="citation" data-cites="Wikle2019">Wikle et al. (<a href="references.html#ref-Wikle2019" role="doc-biblioref">2019</a>)</span> mention in the last line of their acknowledgement that “Finally, we would like to express our appreciation to the whole <span class="math inline">\(\textsf{R}\)</span> community, upon whose shoulders we stand!”!</p></li>
+<li><p><span class="math inline">\(\mathcal{R5}\)</span>: The <span class="math inline">\(\textsf{R}\)</span> software <span class="citation" data-cites="R2026">R Core Team (<a href="references.html#ref-R2026" role="doc-biblioref">2026</a>)</span> and the Rstudio environment <span class="citation" data-cites="RStudio">Posit team (<a href="references.html#ref-RStudio" role="doc-biblioref">2026</a>)</span> and its community of statistical scientists. As <span class="citation" data-cites="Wikle2019">Wikle et al. (<a href="references.html#ref-Wikle2019" role="doc-biblioref">2019</a>)</span> mention in the last line of their acknowledgement, “Finally, we would like to express our appreciation to the whole <span class="math inline">\(\textsf{R}\)</span> community, upon whose shoulders we stand!”!</p></li>
 </ul>
-<p>The aim is to present case-studies from the real-world and how-to-do scripts using the <span class="math inline">\(\textsf{R}\)</span> Statistical System within RStudio for the biometrician as a means of providing reproducible research. For the agricultural scientist there are other approaches such as the menus in the Genstat statistical software <a href="https://vsni.co.uk/resources/genstat" class="uri">https://vsni.co.uk/resources/genstat</a>.</p>
+<p>The aim is to present case-studies from the real-world and how-to-do scripts using the <span class="math inline">\(\textsf{R}\)</span> software within RStudio for the biometrician as a means of providing reproducible research. For the agricultural scientist there are other approaches such as the menus in the Genstat statistical software <a href="https://vsni.co.uk/resources/genstat" class="uri">https://vsni.co.uk/resources/genstat</a>.</p>
 <p>The story started in 2008 when we built a pizza oven. <img src="images/first-pizza-may-2008.jpg" class="img-fluid"></p>
 <blockquote class="blockquote">
 <p>Many years ago, I had a dream To do what Romans do Make slow food and fast cars I cannot do cars, but I thought a PIZZA oven Introducing ’Tartufo’ (Truffles) the elephant with a heart of gold So began the 5Rs of Biometry …</p>
@@ -232,21 +233,21 @@ window.Quarto = {
 <p>Your interest and patience is most appreciated.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-Fisher1948" class="csl-entry" role="listitem">
-Fisher, R. A. 1948. <span>“Biometry.”</span> <em>Biometrics</em> 4: 217–19.
+Fisher, R. A. (1948). Biometry. <em>Biometrics</em>, <em>4</em>, 217–219.
 </div>
 <div id="ref-Bennett1974" class="csl-entry" role="listitem">
-H.Bennett, J., ed. 1974. <em>Collected Papers of <span>R.A.Fisher</span></em>. The University of Adelaide.
+H.Bennett, J. (Ed.). (1974). <em>Collected papers of <span>R.A.Fisher</span></em>. The University of Adelaide.
 </div>
 <div id="ref-RStudio" class="csl-entry" role="listitem">
-Posit team. 2026. <em>RStudio: Integrated Development Environment for r</em>. Posit Software, PBC. <a href="http://www.posit.co/">http://www.posit.co/</a>.
+Posit team. (2026). <em>RStudio: Integrated development environment for r</em>. Posit Software, PBC. <a href="http://www.posit.co/">http://www.posit.co/</a>
 </div>
 <div id="ref-R2026" class="csl-entry" role="listitem">
-R Core Team. 2026. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+R Core Team. (2026). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
 </div>
 <div id="ref-Wikle2019" class="csl-entry" role="listitem">
-Wikle, Christopher K, Andrew Zammit-Mangion, and Noel Cressie. 2019. <em>Spatio-Temporal Statistics with r</em>. Chapman; Hall/CRC.
+Wikle, C. K., Zammit-Mangion, A., &amp; Cressie, N. (2019). <em>Spatio-temporal statistics with r</em>. Chapman; Hall/CRC.
 </div>
 </div>
 

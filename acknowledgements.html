@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -92,6 +93,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="watermark.css">
 <link rel="stylesheet" href="draft.css">
@@ -185,27 +215,28 @@ div.csl-indent {
 </header>
 
 
-<p>Thanks to Emeritus Professor Geoffrey <em>Peter</em> Young <strong>Clarke</strong>, a mentor and great friend for his encouragement, and many hours of discussion and support. The cover design is from Peter’s notes on how to generate a p-rep (partially-replicated) design by hand in 2010. Peter retired from the Department June 22, 2010!</p>
+<p>Thanks to Emeritus Professor Geoffrey <em>Peter</em> Young <strong>Clarke</strong>, a mentor and great friend for his encouragement, and many hours of discussion and support. The cover design is from Peter’s notes on how to generate a p-rep (partially-replicated) design by hand in 2010. Peter retired from the Department June 22, 2010.</p>
+<p>The figure on the cover shows a fictitious experiment showing a two-dimensional layout with 14 treatments; where there are two types of standard or check varieties (S1,S2 which are shown in red text) and replicated 3 times; 6 test-lines duplicated (shown in black text and underlined), and 6 single-replicated test lines (shown in blue text). The figure was produced using the functions from the <strong>sommarioz</strong> <span class="math inline">\(\textsf{R}\)</span> package on GitHub soon.</p>
 <p><img src="images/Rlogo.png" class="img-fluid"></p>
-<p>The R logo is © The R Foundation<a href="https://www.r-project.org/logo/" class="uri">https://www.r-project.org/logo/</a> and is used under the terms of the Creative Commons Attribution-ShareAlike 4.0 International license (CC-BY-SA 4.0).<a href="https://creativecommons.org" class="uri">https://creativecommons.org</a></p>
+<p>The <span class="math inline">\(\textsf{R}\)</span> logo is © The R Foundation<a href="https://www.r-project.org/logo/" class="uri">https://www.r-project.org/logo/</a> and is used under the terms of the Creative Commons Attribution-ShareAlike 4.0 International license (CC-BY-SA 4.0).<a href="https://creativecommons.org" class="uri">https://creativecommons.org</a></p>
 <p>Special thanks to</p>
 <ol type="i">
 <li><p>Neil Coombes on his advice on using the DiGGer-R software (soon to be released on GitHub?);</p></li>
 <li><p>Brian Cullis and David Butler on their advice on odw-R and dwreml-R software (soon to be released on GitHub?);</p></li>
-<li><p>Emlyn Williams for his advice on experimental design and analysis, Genstat (<a href="https://vsni.co.uk/resources/genstat" class="uri">https://vsni.co.uk/resources/genstat</a>) and CycDesign (<span class="citation" data-cites="cycdesign">Whitaker et al. (<a href="references.html#ref-cycdesign" role="doc-biblioref">2022</a>)</span>), and his excellent books (<span class="citation" data-cites="johnwilliams1995">John and Williams (<a href="references.html#ref-johnwilliams1995" role="doc-biblioref">1995</a>)</span> , <span class="citation" data-cites="williams2024">Williams et al. (<a href="references.html#ref-williams2024" role="doc-biblioref">2024</a>)</span>);</p></li>
-<li><p>More…</p></li>
+<li><p>Emlyn Williams for his advice on experimental design and analysis, Genstat (<a href="https://vsni.co.uk/resources/genstat" class="uri">https://vsni.co.uk/resources/genstat</a>) and CycDesign (<span class="citation" data-cites="cycdesign">Whitaker et al. (<a href="references.html#ref-cycdesign" role="doc-biblioref">2022</a>)</span>), and his excellent books (<span class="citation" data-cites="johnwilliams1995">John &amp; Williams (<a href="references.html#ref-johnwilliams1995" role="doc-biblioref">1995</a>)</span> , <span class="citation" data-cites="williams2024">Williams et al. (<a href="references.html#ref-williams2024" role="doc-biblioref">2024</a>)</span>);</p></li>
+<li><p>More to come …</p></li>
 </ol>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-johnwilliams1995" class="csl-entry" role="listitem">
-John, J. A., and E. R. Williams. 1995. <em>Cyclic and Computer Generated Designs</em>. 2nd ed. Chapman; Hall/CRC.
+John, J. A., &amp; Williams, E. R. (1995). <em>Cyclic and computer generated designs</em> (2nd ed.). Chapman; Hall/CRC.
 </div>
 <div id="ref-cycdesign" class="csl-entry" role="listitem">
-Whitaker, D., E. R Williams, and J. A. John. 2022. <em>CycDesigN, Version 8. A Package for the Computer Generation of Experimental Designs.</em> <a href="https://vsni.co.uk/software/cycdesign/">https://vsni.co.uk/software/cycdesign/</a>.
+Whitaker, D., Williams, E. R., &amp; John, J. A. (2022). <em>CycDesigN, version 8. A package for the computer generation of experimental designs.</em> <a href="https://vsni.co.uk/software/cycdesign/">https://vsni.co.uk/software/cycdesign/</a>
 </div>
 <div id="ref-williams2024" class="csl-entry" role="listitem">
-Williams, E. R., C. E. Harwood, and A. C. Matheson. 2024. <em>Experimental Design and Analysis for Tree Improvement</em>. CSIRO publishing.
+Williams, E. R., Harwood, C. E., &amp; Matheson, A. C. (2024). <em>Experimental design and analysis for tree improvement</em>. CSIRO publishing.
 </div>
 </div>
 
